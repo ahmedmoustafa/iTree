@@ -5,12 +5,13 @@
 ##Databases
 A key step in a [phylogenetic analysis](http://en.wikipedia.org/wiki/Phylogenetics) is collecting homologous sequences to the query of interest. This step is typically done through a [BLAST](http://en.wikipedia.org/wiki/BLAST) search against a database. The content of the database has a direct on the taxon sampling and the phylogeny to be inferred. To maximize the sampling, iTree uses the results of BLAST against NBCI [RefSeq](http://www.ncbi.nlm.nih.gov/refseq/) for protein phylogenies and [SILVA](http://www.arb-silva.de/) for ribosomal RNA (rRNA) phylogenies. In both cases, there are the BLAST-formatted (via [formatdb](ftp://ftp.ncbi.nih.gov/blast/documents/formatdb.html) on a [FASTA-formatted](http://en.wikipedia.org/wiki/FASTA_format) file) database and a corresponding [relational database](http://en.wikipedia.org/wiki/Relational_database) for the fast interest of the BLAST hits.
 ###RefSeq
-To make the tree more readable in terms of taxonomic information, the sequences in RefSeq are renamed in the iTree version. The adopted naming convention is `domain.group.species-txid_gi`, where:
+To make the tree more readable in terms of taxonomic information, the sequences in RefSeq are renamed in the iTree version. The adopted naming convention is `domain.group.genus_species-txid_gi`, where:
 
 Token     | Description
 --------- | -----------
 `domain`  | `A` : Archaea, `B` : Bacteria, `E` : Eukarya, `V` : Vira (Viruses)
 `group`   | Basically a major taxonomic under the specific domain
+`genus`   | Genus name
 `species` | Species (or strain) name
 `txid`    | NCBI [taxon identifier](http://www.ncbi.nlm.nih.gov/taxonomy)
 `gi`      | NCBI [gi number](http://www.ncbi.nlm.nih.gov/Sitemap/sequenceIDs.html)
@@ -19,7 +20,7 @@ Although, this naming convention produces pretty long names (the average name le
 
 The renamed RefSeq protein sequences are stored as Fasta for BLAST and MySQL (at least for now) for fast access and retrieval.
 
-Because of a GitHub limitation on the size of files to be pushed to repositories (for more information on this, see [Working with large files](https://help.github.com/articles/working-with-large-files) and [What is my disk quota?](https://help.github.com/articles/what-is-my-disk-quota)), the databases have been deployed to [Sourceforge](https://sourceforge.net/projects/itree/files/).
+Because of a GitHub limitation on the size of files to be pushed to repositories (for more information, see [Working with large files](https://help.github.com/articles/working-with-large-files) and [What is my disk quota?](https://help.github.com/articles/what-is-my-disk-quota)), the iTree databases have been deployed to [Sourceforge](http://sourceforge.net/projects/itree/files/).
 
 The current versions based on the [RefSeq Release 61 (September 2013)](ftp://ftp.ncbi.nlm.nih.gov/refseq/release/release-notes/RefSeq-release61.txt) can be downloaded from [here](http://sourceforge.net/projects/itree/files/refseq_rel_61/).
 
