@@ -10,7 +10,7 @@ To make the tree more readable in terms of taxonomic information, the sequences 
 Token     | Description
 --------- | -----------
 `domain`  | `A` : Archaea, `B` : Bacteria, `E` : Eukarya, `V` : Vira (Viruses)
-`group`   | Basically a major taxonomic under the specific domain
+`group`   | [Major taxonomic group or clade](https://github.com/ahmedmoustafa/iTree/blob/master/Groups.md)
 `genus`   | Genus name
 `species` | Species (or strain) name
 `txid`    | NCBI [taxon identifier](http://www.ncbi.nlm.nih.gov/taxonomy)
