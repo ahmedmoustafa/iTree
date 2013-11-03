@@ -29,14 +29,13 @@ Database File | Description | Size
 `itree_refseq_61.sql.bz2` | MySQL dump | 6.8 GB
 
 After downloading, to load the MySQL dump
+```
+$ bzip2 -d itree_refseq_61.sql.bz2
+$ mysqladmin -u root -p create itree
+$ mysql -u root -p < itree_refseq_61.sql
+```
 
-`$ bzip2 -d itree_refseq_61.sql.bz2`
-
-`$ mysqladmin -u root -p create itree`
-
-`$ mysql -u root -p < itree_refseq_61.sql`
-
-Given the large size of the dump (> 20 GB uncompressed), the last step takes quite some time, varying according to the power of the host machine. On [Amazon EC2 medium instance](http://aws.amazon.com/ec2/instance-types/instance-details/), it took about 12 hours!
+Given the large size of the dump (> 20 GB uncompressed), the last step takes quite some time, varying according to the power of the host machine. On [Amazon EC2 medium instance](http://aws.amazon.com/ec2/instance-types/instance-details/), it takes about 12 hours!
 
 Generally, these databases (Fasta and MySQL) can be utilized independently of iTree. They might be plugged into other phylogenomic pipelines or other general purpose usage.
 
@@ -45,4 +44,6 @@ Coming soon...
 
 
 ##Citation
-Moustafa, A., Bhattacharya, D., and Allen, A.E. (2010). iTree: A high-throughput phylogenomic pipeline. Biomedical Engineering Conference (CIBEC), 2010 5th Cairo International, pp. 103–107. DOI [10.1109/CIBEC.2010.5716071](http://dx.doi.org/10.1109/CIBEC.2010.5716071)
+Moustafa, A., Bhattacharya, D., and Allen, A.E. (2010). iTree: A high-throughput phylogenomic pipeline. Biomedical Engineering Conference (CIBEC), 2010 5th Cairo International, pp. 103–107.
+
+DOI [10.1109/CIBEC.2010.5716071](http://dx.doi.org/10.1109/CIBEC.2010.5716071)
