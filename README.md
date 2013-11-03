@@ -33,17 +33,19 @@ To load the MySQL dump:
 
 ```
 $ bzip2 -d itree_refseq_61.sql.bz2
-$ mysqladmin -u root -p create itree
-$ mysql -u root -p < itree_refseq_61.sql
+$ mysqladmin -u root -p create itreedb
+$ mysql -u root -p itreedb < itree_refseq_61.sql
 ```
 
 Given the large size of the dump (> 20 GB uncompressed), the last step takes quite some time, varying according to the power of the host machine. For example, on an [Amazon EC2 medium instance](http://aws.amazon.com/ec2/instance-types/instance-details/), doing nothing else, it takes about 12 hours!
 
-To format the Fasta sequences (for BLAST):
+To format the Fasta database (to make it ready for BLAST):
 
 ```
 $ bzip2 -d itree_refseq_61.fas.bz2
-$ formatdb -i itree_refseq_61.fas
+$ ln -s itree_refseq_61.fas itreedb
+$ formatdb -i itreedb
+$ rm itreedb
 ```
 
 Generally, these databases (Fasta and MySQL) can be utilized independently of iTree. They might be plugged into other phylogenomic pipelines or other general-purpose usage.
