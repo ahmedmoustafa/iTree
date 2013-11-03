@@ -36,7 +36,7 @@ $ mysqladmin -u root -p create itree
 $ mysql -u root -p < itree_refseq_61.sql
 ```
 
-Given the large size of the dump (> 20 GB uncompressed), the last step takes quite some time, varying according to the power of the host machine. On [Amazon EC2 medium instance](http://aws.amazon.com/ec2/instance-types/instance-details/), it takes about 12 hours!
+Given the large size of the dump (> 20 GB uncompressed), the last step takes quite some time, varying according to the power of the host machine. For example, on an [Amazon EC2 medium instance](http://aws.amazon.com/ec2/instance-types/instance-details/), doing nothing else, it takes about 12 hours!
 
 Generally, these databases (Fasta and MySQL) can be utilized independently of iTree. They might be plugged into other phylogenomic pipelines or other general purpose usage.
 
