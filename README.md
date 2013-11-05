@@ -22,12 +22,12 @@ The renamed RefSeq protein sequences are stored as Fasta for BLAST and MySQL (at
 
 Because of a GitHub limitation on the size of files to be pushed to repositories (for more information, see [Working with large files](https://help.github.com/articles/working-with-large-files) and [What is my disk quota?](https://help.github.com/articles/what-is-my-disk-quota)), the iTree databases have been deployed to [Sourceforge](http://sourceforge.net/projects/itree/files/).
 
-The current versions based on the [RefSeq Release 61 (September 2013)](ftp://ftp.ncbi.nlm.nih.gov/refseq/release/release-notes/RefSeq-release61.txt) can be downloaded from [here](http://sourceforge.net/projects/itree/files/refseq_rel_61/).
+The current versions based on the [RefSeq Release 61 (September 2013)](ftp://ftp.ncbi.nlm.nih.gov/refseq/release/release-notes/RefSeq-release61.txt) can be downloaded from [here](https://sourceforge.net/projects/itree/files/itreedb_rel_2013/).
 
 Database File | Description | Size
 ------------- | ----------- | ----
-`itree_refseq_61.fas.bz2` | Fasta sequences | 6.5 GB 
-`itree_refseq_61.sql.bz2` | MySQL dump | 6.8 GB
+[`itree_refseq_61.fas.bz2`](http://sourceforge.net/projects/itree/files/itreedb_rel_2013/itree_refseq_61.fas.bz2/download) | Fasta sequences | 6.5 GB 
+[`itree_refseq_61.sql.bz2`](http://sourceforge.net/projects/itree/files/itreedb_rel_2013/itree_refseq_61.sql.bz2/download) | MySQL dump | 6.8 GB
 
 To load the MySQL dump:
 
